@@ -9,13 +9,7 @@ tags:
 templateEngineOverride: njk,md
 ---
 
-<details>
-  <summary>Spoiler Alert</summary>
 
-    undefined
-
-
-</details>
 
 
 ## Most Music is rubbish
