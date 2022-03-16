@@ -12,17 +12,6 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - name: posts
-    label: Posts
-    folder: content/posts
-    fields:
-      - name: title
-        label: Title
-        widget: string
-      - name: categories
-        label: Categories
-        widget: categories
-        separator: __
   - label: "Pages"
     name: "pages-name"
     folder: "src/pages"
