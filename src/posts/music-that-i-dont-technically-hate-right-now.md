@@ -10,7 +10,7 @@ templateEngineOverride: njk,md
 ---
 
 <details>
-  <summary>This is the summart area</summary>
+  <summary>Spoiler Alert</summary>
 
     undefined
 
