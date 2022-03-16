@@ -102,25 +102,25 @@
             // markdown document
             toBlock: function (data) {
                 return `
-<details>
-  <summary>${data.summary}</summary>
+                    <details>
+                    <summary>${data.summary}</summary>
 
-  ${data.detail}
+                    ${data.detail}
 
-</details>
-`;
-            },
-            // Preview output for this component. Can either be a string or a React component
-            // (component gives better render performance)
-            toPreview: function (data) {
-                return `
-<details>
-  <summary>${data.summary}</summary>
+                    </details>
+                    `;
+                                },
+                                // Preview output for this component. Can either be a string or a React component
+                                // (component gives better render performance)
+                                toPreview: function (data) {
+                                    return `
+                    <details>
+                    <summary>${data.summary}</summary>
 
-  ${data.detail}
+                    ${data.details}
 
-</details>
-`;
+                    </details>
+                    `;
             }
         });
 
