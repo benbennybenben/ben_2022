@@ -18,8 +18,9 @@
   </head>
   <body class="bg-cyan-900 text-amber-50">
     {% include "./partials/navbar.html" %}
-
-    {{ content | safe }}
+    <main class="container max-w-3xl mt-6 px-6">
+      {{ content | safe }}
+    </main>
 
     {% include "./partials/footer.html" %}
 
