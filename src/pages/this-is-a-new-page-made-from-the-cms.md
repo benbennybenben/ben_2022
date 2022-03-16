@@ -7,3 +7,7 @@ tags:
   - pages
 ---
 This is my projects page where you can see my projects
+
+### Look at this image I made
+
+![Neon Banana render](/static/img/neonana-01.png "Made using Blender 3.0")
