@@ -53,6 +53,13 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+
+  // Basic Shortcode for testing
+  eleventyConfig.addShortcode("cat", function(firstName, lastName){
+    return firstName.toLowerCase() + " " + lastName.toUpperCase()
+  });
+
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
@@ -60,5 +67,6 @@ module.exports = function (eleventyConfig) {
       input: "src",
     },
     htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
   };
 };
