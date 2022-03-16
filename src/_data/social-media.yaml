@@ -1,3 +1,10 @@
 platform: Twitter
 url: https://twitter.com/benbennybenben
 handel: benbennybenben
+items:
+  - platform: Twitter
+    url: https://twitter.com/benbennybenben
+    handel: benbennybenben
+  - platform: Ello
+    url: https://ello.co/benbennybenben
+    handel: benbennybenben
