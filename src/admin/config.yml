@@ -89,7 +89,7 @@ collections:
         name: "Socials"
         file: "src/_data/social-media.yaml"
         fields: 
-          - label: Platform Items
+          - label: "Platform Items"
             name: items
             widget: list
             allow_add: true
