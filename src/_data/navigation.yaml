@@ -1,8 +1,8 @@
 items:
   - text: Dull
     url: /dull
-  - text: Menu Two
-    url: "#"
+  - text: Projects
+    url: /pages/projects
   - text: Menu Three
     url: "#"
   - text: Blog
