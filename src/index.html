@@ -21,8 +21,19 @@ tag: something
 
   {% include "./_includes/partials/content.html" %} -->
   <div class="flex flex-row flex-wrap  w-full ">
-    {% for i in range(500) %}
+    {% for i in range(50) %}
       <h1 class="text-lg mr-2 font-bold">Ben</h1>
     {% endfor %}
+  </div>
+
+  <div class="bg-blue-900 p-8">
+    {% for page in collections.pages %}
+      {{page.tags}}
+      <a href="{{page.url | url}}" class="underline text-blue-600 hover:text-blue-300 transition ease-out">{{page.data.title}}</a>
+    {%  endfor %}
+  </div>
+
+  <div>
+
   </div>
 </div>
