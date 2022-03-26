@@ -7,9 +7,14 @@
 h1 {
   @apply text-3xl tracking-tighter mb-3 lg:text-7xl;
 }
-
+h2{
+  @apply text-2xl tracking-tighter mb-2 font-bold
+}
 h3 {
   @apply text-2xl font-bold mb-3 text-gray-400;
+}
+h5{
+  @apply text-xl font-light mb-3
 }
 
 /* Syntax Highlighting*/

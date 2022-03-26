@@ -1,0 +1,24 @@
+---
+layout: default
+title: Lineup
+path: lineup
+---
+
+<div class="bg-red-600 w-md mx-auto p-6">
+    <div class="text-3xl mb-2">Lineup</div>
+    {% if lineup.subHeader %}
+    <div class="text-xl font-light mb-2">{{lineup.subHeader}}</div>
+    {% endif %}
+
+    {% if pagePhases.lineupPhaseSelection == 'Phase 1' %}
+        <div class="font-bold text-xl tracking-tight">
+            Lineup announced soon
+        </div>
+    {% elif pagePhases.lineupPhaseSelection == 'Phase 2' %}
+    {% for item in lineup.artists %}
+        {% if item.visibility == 'visible' %}
+        <div class="font-bold text-xl tracking-tight">{{item.name}}</div>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
