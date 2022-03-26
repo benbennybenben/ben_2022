@@ -19,7 +19,15 @@
   <body class="bg-neutral-800 text-amber-50">
     {% include "./partials/navbar.html" %}
     <main class="container max-w-3xl mt-6 px-6">
-      {{ content | safe }}
+      <div>
+        <div class="mb-4">
+          <div class="text-3xl font-bold">Welcome to the FAQ page</div>
+          <div class="text-2xl font-light">Curabitur conubia feugiat a fusce ridiculus id metus accumsan consequat efficitur maximus class rhoncus potenti dignissim porttitor vulputate sodales placerat praesent odio quam sit.</div>
+        </div>
+        <div class="prose dark:prose-invert prose-h2:mb-2 prose-p:text-lg prose-h2:tracking-normal ">
+          {{ content | safe }}
+        </div>
+      </div>
     </main>
 
     {% include "./partials/footer.html" %}
