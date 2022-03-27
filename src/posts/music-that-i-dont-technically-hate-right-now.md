@@ -7,6 +7,11 @@ date: 2022-03-15T23:18:33.686Z
 tags:
   - created
 templateEngineOverride: njk,md
+categories: 
+  - 'sideproject'
+  - 'personal project'
+  - 'difficult'
+myWidget: 'hello world'
 ---
 ![p5.js render](/static/img/myimage-1642422033721.png "p5.js Contoured Lines")
 

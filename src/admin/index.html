@@ -14,7 +14,88 @@
     <!-- Netlify Identity Widget -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+    <!-- My first custom widget -->
+    <script>
+        const name = 'categories';
+        const CategoriesControl = createClass({
+            handleChange: function (e) {
+                const separator = this.props.field.get('separator', ', ')
+                this.props.onChange(e.target.value.split(separator).map((e) => e.trim()));
+            },
 
+            render: function () {
+                const separator = this.props.field.get('separator', ', ');
+                var value = this.props.value;
+                return h('input', {
+                    id: this.props.forID,
+                    className: this.props.classNameWrapper,
+                    type: 'text',
+                    value: value ? value.join(separator) : '',
+                    onChange: this.handleChange,
+                });
+            },
+        });
+
+        var CategoriesPreview = createClass({
+            render: function () {
+                return h('ul', {},
+                    this.props.value.map(function (val, index) {
+                        return h('li', { key: index }, val);
+                    })
+                );
+            }
+        });
+
+        var schema = {
+            properties: {
+                separator: { type: 'string' },
+            },
+        }
+        CMS.registerWidget(name, CategoriesControl, CategoriesPreview, schema)
+    </script>
+
+
+<!-- My second custom widget -->
+    <script>
+        const myWidgetName = 'myWidget';
+        const myWidgetControl = createClass({
+            handleChange: function (e) {
+                // const separator = this.props.field.get('separator', ', ')
+                // this.props.onChange(e.target.value.split(separator).map((e) => e.trim()));
+                this.props.onChange(e.target.value).toUpperCase()
+            },
+
+            render: function () {
+                const separator = this.props.field.get('separator', ', ');
+                var value = this.props.value;
+                var uppr = this.props.field.get('uppercase');
+                return h('input', {
+                    id: this.props.forID,
+                    className: this.props.classNameWrapper,
+                    type: 'text',
+                    value: value + " " + uppr,
+                    onChange: this.handleChange,
+                });
+            },
+        });
+
+        var myWidgetPreview = createClass({
+            render: function () {
+                return h('div', { duck: 'Hello I am duck' },
+                    function (val) {
+                        return `${val} ${uppr} - ${this.props.duck}`;
+                    }
+                );
+            }
+        });
+
+        var myWidgetSchema = {
+            properties: {
+                uppercase: { type: 'boolean' },
+            },
+        }
+        CMS.registerWidget(myWidgetName, myWidgetControl, myWidgetPreview, myWidgetSchema)
+    </script>
 
 
 </body>
